@@ -50,5 +50,8 @@ for rownum in range(0, sh.nrows):
 
 #print people_list
 
+data = {}
+data['entries'] = people_list
+
 with codecs.open("data.json", "w", "utf-8") as f:
-    json.dump(people_list, f, ensure_ascii=False)
+    json.dump(data, f, ensure_ascii=False)
