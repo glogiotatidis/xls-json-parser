@@ -28,7 +28,7 @@ for rownum in range(0, sh.nrows):
  for values in row_values:
   if values=='':
    i=row_values.index(values)
-   row_values[i]="null"
+   row_values[i]=None
 
  #if
  # person['head']= TRUE
