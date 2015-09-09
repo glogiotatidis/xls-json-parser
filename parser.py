@@ -50,8 +50,5 @@ for rownum in range(0, sh.nrows):
 
 #print people_list
 
-
-j = json.dumps(people_list).decode('utf-8')
-
-# with codecs.open("data.json", "w", encoding='utf-8') as f:
-#  f.write(j)
+with codecs.open("data.json", "w", "utf-8") as f:
+    json.dump(people_list, f, ensure_ascii=False)
