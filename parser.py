@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 import xlrd
 import codecs
 import json
@@ -42,6 +42,9 @@ for rownum in range(0, sh.nrows):
  person['section'] = row_values[5]
  person['head'] = False
  person['color'] = random.choice(['ffffb5', 'ffb5d3', 'ffe1b5'])
+
+ if person['party'] == u'ΑΝΕΝΤΑΧΤΟΣ':
+     person['party'] = u'Ανένταχτος-η'
 
  if temp!=row_values[5]:
   person['head'] = True
