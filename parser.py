@@ -3,6 +3,7 @@
 import xlrd
 import codecs
 import json
+import random
 from collections import OrderedDict
 
 
@@ -40,6 +41,7 @@ for rownum in range(0, sh.nrows):
  person['facebook'] = row_values[4]
  person['section'] = row_values[5]
  person['head'] = False
+ person['color'] = random.choice(['ffffb5', 'ffb5d3', 'ffe1b5'])
 
  if temp!=row_values[5]:
   person['head'] = True
