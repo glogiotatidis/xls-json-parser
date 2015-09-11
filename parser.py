@@ -35,16 +35,12 @@ for rownum in range(0, sh.nrows):
  # person['head']= TRUE
  person['name'] = row_values[0]
  person['initials'] = get_initials(person['name'])
- person['party'] = row_values[1]
  person['occupation'] = row_values[2]
  person['twitter'] = row_values[3]
  person['facebook'] = row_values[4]
  person['section'] = row_values[5]
  person['head'] = False
  person['color'] = random.choice(['ffffb5', 'ffb5d3', 'ffe1b5'])
-
- if person['party'] == u'ΑΝΕΝΤΑΧΤΟΣ':
-     person['party'] = u'Ανένταχτος-η'
 
  if temp!=row_values[5]:
   person['head'] = True
