@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import sys
 import xlrd
 import codecs
 import json
@@ -14,7 +15,7 @@ def get_initials(name):
  last=name[i+1]
  return first+last
 
-doc= xlrd.open_workbook('el.xlsx')
+doc= xlrd.open_workbook(sys.argv[1])
 print doc.sheet_names()
 
 sh = doc.sheet_by_index(0)
